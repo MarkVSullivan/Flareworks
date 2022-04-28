@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8CCC35CD-682A-45DD-8AEA-FA72D24B3733}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FlareWorks.Library</RootNamespace>
+    <AssemblyName>FlareWorks</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MemoryMgmt\ApplicationCache.cs" />
+    <Compile Include="Models\ControlledValues\BibliographicLevelInfo.cs" />
+    <Compile Include="Models\ControlledValues\CatalogingTypeInfo.cs" />
+    <Compile Include="Models\ControlledValues\CleanUpTypeInfo.cs" />
+    <Compile Include="Models\ControlledValues\DocumentTypeInfo.cs" />
+    <Compile Include="Models\ControlledValues\ErrorTypeInfo.cs" />
+    <Compile Include="Models\ControlledValues\FederalAgencyInfo.cs" />
+    <Compile Include="Models\ControlledValues\InstitutionInfo.cs" />
+    <Compile Include="Models\ControlledValues\LocationInfo.cs" />
+    <Compile Include="Models\ControlledValues\MaterialTypeInfo.cs" />
+    <Compile Include="Models\Work\ItemWork.cs" />
+    <Compile Include="Models\Work\ItemWork_Error.cs" />
+    <Compile Include="Models\Work\QcHistoryInfo.cs" />
+    <Compile Include="Models\Work\TitleInfo.cs" />
+    <Compile Include="Models\Users\UserInfo.cs" />
+    <Compile Include="Models\Users\UserInfo_Permissions.cs" />
+    <Compile Include="Models\Users\UserInfo_Recents.cs" />
+    <Compile Include="Models\Users\UserInfo_Recents_LastAdded.cs" />
+    <Compile Include="Models\Users\UserInfo_Recents_LastSearch.cs" />
+    <Compile Include="Models\Work\TitleInfo_CleanUp.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

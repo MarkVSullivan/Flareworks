@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Config>
+  <MicroservicesClient>
+    
+ <!--   <Add Key="VerifyAccountNumber" URL="https://devdmsmidtier.jax.gdiyellowpages.com:8000/webuser/verify/json/{0}/{1}" Protocol="JSON" />
+
+    <Add Key="MakeCcPayment" URL="https://devdmsmidtier.jax.gdiyellowpages.com:8000/webuser/ccpayment/json" Protocol="JSON" />  -->
+
+    <Add Key="VerifyAccountNumber" URL="http://localhost:62854/webuser/verify/json/{0}/{1}" Protocol="JSON" />
+
+    <Add Key="MakeCcPayment" URL="http://localhost:62854/webuser/ccpayment/json" Protocol="JSON" />
+
+  </MicroservicesClient>
+</Config>
