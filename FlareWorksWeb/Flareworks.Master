@@ -4,11 +4,21 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Flareworks</title>
+    <link href="css/Flareworks.css" rel="stylesheet" type="text/css" />
+    
+    <% Add_Js(); %>
+
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <div id="page-wrapper">
+    <div id="content-wrapper">
+        <div id="header">
+            <span id="username"><% Add_Username(); %></span>
+            <h1><a href="http://flareworks.sobekdigital.com">Flareworks</a></h1>
+        </div>
     <form id="form1" runat="server">
     <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
@@ -16,5 +26,7 @@
         </asp:ContentPlaceHolder>
     </div>
     </form>
+        </div>
+        </div>
 </body>
 </html>

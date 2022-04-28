@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FlareWorks.Library</RootNamespace>
-    <AssemblyName>FlareWorks</AssemblyName>
+    <AssemblyName>FlareWorksLibrary</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -38,7 +38,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -47,18 +49,31 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\DatabaseGateway.cs" />
+    <Compile Include="DataService\DataServiceHandler.cs" />
+    <Compile Include="Models\QC\WorkSet_AuthorityWork.cs" />
+    <Compile Include="Search\SearchHelper.cs" />
+    <Compile Include="UrlRewriter\FlareworksRewriter.cs" />
     <Compile Include="MemoryMgmt\ApplicationCache.cs" />
+    <Compile Include="Models\ControlledValues\AuthorityRecordTypeInfo.cs" />
     <Compile Include="Models\ControlledValues\BibliographicLevelInfo.cs" />
+    <Compile Include="Models\ControlledValues\BriefWorkerInfo.cs" />
     <Compile Include="Models\ControlledValues\CatalogingTypeInfo.cs" />
     <Compile Include="Models\ControlledValues\CleanUpTypeInfo.cs" />
     <Compile Include="Models\ControlledValues\DocumentTypeInfo.cs" />
     <Compile Include="Models\ControlledValues\ErrorTypeInfo.cs" />
     <Compile Include="Models\ControlledValues\FederalAgencyInfo.cs" />
     <Compile Include="Models\ControlledValues\InstitutionInfo.cs" />
+    <Compile Include="Models\ControlledValues\ItemHolActionTypeInfo.cs" />
     <Compile Include="Models\ControlledValues\LocationInfo.cs" />
     <Compile Include="Models\ControlledValues\MaterialTypeInfo.cs" />
+    <Compile Include="Models\ControlledValues\PccCategoryInfo.cs" />
+    <Compile Include="Models\ControlledValues\RecordTypeInfo.cs" />
+    <Compile Include="Models\QC\WorkSetItem.cs" />
+    <Compile Include="Models\Search\SearchInfo.cs" />
+    <Compile Include="Models\Search\SingleSearchCriterion.cs" />
     <Compile Include="Models\Work\ItemWork.cs" />
-    <Compile Include="Models\Work\ItemWork_Error.cs" />
+    <Compile Include="Models\QC\WorkSet_Error.cs" />
     <Compile Include="Models\Work\QcHistoryInfo.cs" />
     <Compile Include="Models\Work\TitleInfo.cs" />
     <Compile Include="Models\Users\UserInfo.cs" />
@@ -67,12 +82,13 @@
     <Compile Include="Models\Users\UserInfo_Recents_LastAdded.cs" />
     <Compile Include="Models\Users\UserInfo_Recents_LastSearch.cs" />
     <Compile Include="Models\Work\TitleInfo_CleanUp.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Models\QC\WorkSet.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\EmailInfo.cs" />
+    <Compile Include="Tools\Email_Helper.cs" />
+    <Compile Include="Tools\SecurityInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

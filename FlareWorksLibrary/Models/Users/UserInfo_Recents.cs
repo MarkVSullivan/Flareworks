@@ -16,11 +16,20 @@ namespace FlareWorks.Models.Users
         /// <summary>  </summary>
         public UserInfo_Recents_LastSearch LastSearch { get; private set; }
 
+        /// <summary> If this is a QC admin, the last location selected for filtering items ready for QC </summary>
+        public string LastQcLocationSelected { get; set; }
+
+        /// <summary> If this is a QC admin, the last user selected for filtering items ready for QC  </summary>
+        public string LastQcUserSelected { get; set; }
+
         /// <summary> Constructor for a new instance of the <see cref="UserInfo_Recents"/> class </summary>
         public UserInfo_Recents()
         {
             LastAdded = new UserInfo_Recents_LastAdded();
             LastSearch = new UserInfo_Recents_LastSearch();
+
+            LastQcLocationSelected = String.Empty;
+            LastQcUserSelected = String.Empty;
         }
 
 

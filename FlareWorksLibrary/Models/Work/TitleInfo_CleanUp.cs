@@ -20,5 +20,33 @@ namespace FlareWorks.Models.Work
 
         /// <summary> User that cleared this task </summary>
         public string ClearedByUser { get; set; }
+
+        /// <summary> Any description, included in the OTHER category of record clean-up </summary>
+        public string OtherDescription { get; set; }
+
+        /// <summary> Primary key for this record clean-up </summary>
+        public int PrimaryKey { get; set; }
+
+        /// <summary> Constructor for a new instance of the TitleInfo_CleanUp class </summary>
+        public TitleInfo_CleanUp()
+        {
+            // Empty
+        }
+
+        /// <summary> Constructor for a new instance of the TitleInfo_CleanUp class </summary>
+        /// <param name="CleanUpType"> Type of the clean-up task </param>
+        public TitleInfo_CleanUp(string CleanUpType)
+        {
+            this.CleanUpType = CleanUpType;
+        }
+
+        /// <summary> Constructor for a new instance of the TitleInfo_CleanUp class </summary>
+        /// <param name="PrimaryKey"> Primary key for this record clean-up </param>
+        /// <param name="CleanUpType"> Type of the clean-up task </param>
+        public TitleInfo_CleanUp(int PrimaryKey, string CleanUpType)
+        {
+            this.PrimaryKey = PrimaryKey;
+            this.CleanUpType = CleanUpType;
+        }
     }
 }

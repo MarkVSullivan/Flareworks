@@ -22,9 +22,6 @@ namespace FlareWorks.Models.Work
         /// <summary> Date these items were initially added to the Flareworks database </summary>
         public DateTime DateAdded { get; set; }
 
-        /// <summary> Name of the form used when these items were added to the Flareworks database </summary>
-        public string FormUsed { get; set; }
-
         /// <summary> Date these items were submitted for QC by the worker, or NULL </summary>
         public DateTime? DateSubmitted { get; set; }
 
@@ -40,9 +37,6 @@ namespace FlareWorks.Models.Work
         /// <summary> Flag indicates if this is the last copy? </summary>
         public bool LastCopy { get; set; }
 
-        /// <summary> Note from the item processor </summary>
-        public string ItemProcessorNote { get; set; }
-
         /// <summary> Date this set of items was last updated, or NULL </summary>
         public DateTime? DateLastUpdated { get; set; }
 
@@ -52,7 +46,10 @@ namespace FlareWorks.Models.Work
         /// <summary> Date this set was approved by QC, or NULL </summary>
         public DateTime? DateApproved { get; set; }
 
-        /// <summary> Any notes added during the QC process </summary>
-        public string QcNotes { get; set; }  
+        /// <summary> Constructor for a new instance of the <see cref="ItemWork"/> class </summary>
+        public ItemWork()
+        {
+            PrimaryKey = -1;
+        }
     }
 }

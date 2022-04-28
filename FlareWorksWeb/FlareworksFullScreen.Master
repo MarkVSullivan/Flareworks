@@ -1,0 +1,35 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FlareworksFullScreen.master.cs" Inherits="FlareworksWeb.FlareworksFullScreen" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Flareworks</title>
+    <link href="css/Flareworks.css" rel="stylesheet" type="text/css" />
+    
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <% Add_Js(); %>
+</head>
+<body>
+    <div id="page-wrapper">
+    <div id="content-wrapper" style="width:1300px;padding:10px 10px 10px 10px;">
+        <div id="header">
+            <span id="username"><% Add_Username(); %></span>
+            <h1><a href="http://flareworks.sobekdigital.com">Flareworks</a></h1>
+        </div>
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+        </div>
+        </div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FlareworksNavBar.master.cs" Inherits="FlareworksWeb.FlareworksNavBar" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title>Flareworks</title>
+    <link href="css/Flareworks.css" rel="stylesheet" type="text/css" />
+    
+    <% Add_Js(); %>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="page-wrapper">
+
+        <table id="content-table-navbar">
+            <tr>
+                <td colspan="2">
+                    <div id="header">
+                        <span id="username"><% Add_Username(); %></span>
+                        <h1><a href="http://flareworks.sobekdigital.com">Flareworks</a></h1>
+                        
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td id="navbar-cell">
+                    <ul>
+                        <% Add_User_Menus(); %>
+                    </ul>
+                </td>
+                <td id="main-cell">
+
+                    <form id="form1" runat="server">
+                        <div>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</body>
+</html>
